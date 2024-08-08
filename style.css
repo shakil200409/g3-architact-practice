@@ -10,8 +10,19 @@ body{
 }
 
 /* Text Colors */
-.color-gray {
+.color-gray{
   color: #424242;
+}
+.color-orange{
+  color: #ff900e;
+}
+.color-black{
+  color: #000;
+}
+
+/* Text Styles */
+.text-bold{
+  font-weight: 700;
 }
 
 /* Background Colors */
@@ -20,8 +31,19 @@ body{
 }
 
 /* Display Layout */
+.container{
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
 .display-flex {
   display: flex;
+}
+.display-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
 /* Button Colors & Design */
@@ -73,10 +95,46 @@ body{
   width: 100%;
 }
 
-/* Responsive Code */
+/* Features list section */
+.feature-lists{
+  gap: 50px;
+  align-items: center;
+}
+.feature-heading{
+  font-size: 3rem;
+}
+
+.feature-img-clg{
+  width: 100%;
+}
+.feature-img-clg> img{
+  height: 100%;
+  width: 100%;
+}
+
+.feature-content{
+  width: 100%;
+}
+
+/* Responsive Code for small devices*/
 @media screen and (max-width: 575px){
-  .navbar, .nav-links{
+  .navbar, 
+  .nav-links,
+  .feature-lists{
+    flex-direction: column;
+    align-items: center;
+  }
+  .display-grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Responsive for medium devices */
+@media screen and (min-width: 575px) and (max-width: 990px){
+  .feature-lists{
     flex-direction: column;
     align-items: center;
   }
 }
+
+
